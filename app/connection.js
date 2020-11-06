@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const dgram = require('dgram');
 const logger = require('winston');
-const EventEmitter = require('events');
+const EventEmitter = require('events').EventEmitter.defaultMaxListeners = 100;
 const { encrypt, decrypt, defaultKey } = require('./encryptor');
 
 const commandsMap = {

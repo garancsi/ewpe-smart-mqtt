@@ -1,5 +1,5 @@
 const logger = require('winston');
-const EventEmitter = require('events');
+const EventEmitter = require('events').EventEmitter.defaultMaxListeners = 100;;
 const Connection = require('./connection');
 const { defaultKey } = require('./encryptor');
 const TEMPERATURE_SENSOR_OFFSET = -40;
