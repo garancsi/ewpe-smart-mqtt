@@ -1,8 +1,10 @@
 const logger = require('winston');
-const EventEmitter = require('events').EventEmitter.defaultMaxListeners = 100;;
+const EventEmitter = require('events');
 const Connection = require('./connection');
 const { defaultKey } = require('./encryptor');
 const TEMPERATURE_SENSOR_OFFSET = -40;
+
+EventEmitter.EventEmitter.defaultMaxListeners = 100;
 
 // https://github.com/tomikaa87/gree-remote
 const statusKeys = [
